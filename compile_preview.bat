@@ -1,0 +1,1 @@
+pdflatex -jobname=chapter01 "\includeonly{chap01}\input{book}"

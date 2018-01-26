@@ -15,8 +15,10 @@
 % Boldface
 \def\ve{{\mathbf{e}}}
 \def\vf{{\mathbf{f}}}
+\def\vu{{\mathbf{u}}}
 \def\vv{{\mathbf{v}}}
 \def\vx{{\mathbf{x}}}
+\def\vy{{\mathbf{x}}}
 \def\v0{{\mathbf{0}}}
 
 \newcommand{\lcm}{\mathrm{lcm}}
@@ -29,3 +31,7 @@
 % A matter of taste
 \renewcommand*{\le}{\leqslant}
 \renewcommand*{\leq}{\leqslant}
+
+% Labeling conventions
+\usepackage{chngcntr}
+\counterwithout{equation}{section}

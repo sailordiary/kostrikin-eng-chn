@@ -1,0 +1,51 @@
+\documentclass[a4paper,oneside,12pt]{book}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{bm}
+\usepackage{mathtools,mathdots}
+\usepackage{polynom}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\usepackage{enumitem}
+\usepackage{epigraph}
+
+\usepackage[pdfpagelabels=true,
+	pdffitwindow=false,
+	pdfview=FitH,
+	pdfstartview=FitH,
+	pagebackref=true,
+	backref=false,
+	breaklinks=true,
+	colorlinks=true,
+	bookmarks=true,
+	bookmarksnumbered=true,
+	bookmarksopen=true,
+	bookmarksopenlevel=1,
+	bookmarksdepth=1,
+	plainpages=true]{hyperref}
+\hypersetup{linkcolor=blue, citecolor=red}
+\hypersetup{pdfauthor={A.I. Kostrikin; Zhang Yuanhang},%
+	pdftitle={Introduction to Algebra, Part II},%
+	pdfsubject={Linear Algebra},%
+	pdfkeywords={Mathematics}
+}
+
+\usepackage[top=2.54cm, bottom=2.54cm, left=3.17cm, right=3.17cm]{geometry}
+
+\input{preamble.tex}
+
+\title{Introduction to Algebra, 3rd Edition\\Part II: Linear Algebra}
+\author{A. I. Kostrikin\thanks{Translator: \href{mailto:me@caszhang.cn}{Yuan-Hang Zhang}, University of Chinese Academy of Sciences}}
+\date{Draft of \today}
+
+\begin{document}
+	\maketitle
+	\frontmatter
+	\include{preface}
+	\frontmatter
+	\tableofcontents
+	\mainmatter
+	\include{chap01}
+	\include{chap02}
+\end{document}

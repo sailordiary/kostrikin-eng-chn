@@ -6,32 +6,69 @@
 \def\bC{{\mathbb{C}}}
 \def\bZ{{\mathbb{Z}}}
 
+% Cal
+\def\cL{{\mathcal{L}}}
+
+% Franklin
+\def\fB{{\mathfrak{B}}}
 \def\fK{{\mathfrak{K}}}
 
-\def\Ker{{\mathrm{Ker}}}
-\def\Aff{{\mathrm{Aff}}}
-\def\Im{{\mathrm{Im}}}
-
 % Boldface
+\def\va{{\mathbf{a}}}
+\def\vb{{\mathbf{b}}}
 \def\ve{{\mathbf{e}}}
 \def\vf{{\mathbf{f}}}
 \def\vu{{\mathbf{u}}}
 \def\vv{{\mathbf{v}}}
+\def\vw{{\mathbf{w}}}
 \def\vx{{\mathbf{x}}}
 \def\vy{{\mathbf{y}}}
+\def\vz{{\mathbf{z}}}
 \def\v0{{\mathbf{0}}}
 
+% Signs
+\def\deq{{\stackrel{\text{def}}{=}}}
+
+% Shorthands
+\def\eps{\varepsilon}
+
+% 
+\def\Pf{{\mathrm{Pf}}}
+
+% Operators
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\codim}{codim}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Ker}{Ker}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Aff}{Aff}
 \newcommand{\diag}[1]{\mathrm{diag}(#1)}
-\newcommand{\tp}[1]{{#1}^\mathrm{t}}
+\newcommand{\tp}[1]{{}^t{#1}}
 
 % A matter of taste
 \renewcommand*{\le}{\leqslant}
 \renewcommand*{\leq}{\leqslant}
 
+% Extend to full-length coverage
+\renewcommand{\bar}{\overline}
+\renewcommand{\hat}{\widehat}
+\renewcommand{\tilde}{\widetilde}
+
 % Labeling conventions
-\usepackage{chngcntr}
-\counterwithout{equation}{section}
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\arabic{equation}}
+
+% AMSThm defs
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\renewcommand{\thetheorem}{\arabic{theorem}}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\renewcommand{\thedefinition}{\arabic{definition}}
+\theoremstyle{remark}
+\newtheorem*{convention}{Convention}
+\newtheorem{example}{Example}[section]
+\renewcommand{\theexample}{\arabic{example}}

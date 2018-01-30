@@ -1,6 +1,6 @@
 \section{Abstract Vector Spaces}
 \subsection{Motivation and Axiomatization}
-In [BA I, Ch. 2], we studied the $n$-dimensional vector space $\bR^n =\{(x_1,\dots ,x_n)\mid x_i \in \bR\}$ with rows of length $n$, along with linear maps $\bR^n \to \bR^m$ with a one-to-one correspondence to the $m\times n$ matrices. When $m = n$ the bijective linear mapping $\varphi_A\colon \bR^n \to \bR^m$ is characterized by the determinant property $\det A \neq 0$, which allows you to use Cramer's rule for solving a system of linear equations associated with $\varphi_A$ and a fixed vector in $\bR^n$. If $\det A = 0$, solutions of the homogeneous linear system form a subspace in R, but as we mentioned back then, this subspace (or rather, the linear span) is an object of a different nature: if $\bR^n$ admits a basis $(1,0,\dots ,0),\dots ,(0,\dots ,0,1)$, the linear span $U\subset\bR^n$ usually does not admit a basis of this kind. This inconvenience arises from the overly concrete nature of $\bR^n$.
+In [IA I, Ch. 2], we studied the $n$-dimensional vector space $\bR^n =\{(x_1,\dots ,x_n)\mid x_i \in \bR\}$ with rows of length $n$, along with linear maps $\bR^n \to \bR^m$ with a one-to-one correspondence to the $m\times n$ matrices. When $m = n$ the bijective linear mapping $\varphi_A\colon \bR^n \to \bR^m$ is characterized by the determinant property $\det A \neq 0$, which allows you to use Cramer's rule for solving a system of linear equations associated with $\varphi_A$ and a fixed vector in $\bR^n$. If $\det A = 0$, solutions of the homogeneous linear system form a subspace in R, but as we mentioned back then, this subspace (or rather, the linear span) is an object of a different nature: if $\bR^n$ admits a basis $(1,0,\dots ,0),\dots ,(0,\dots ,0,1)$, the linear span $U\subset\bR^n$ usually does not admit a basis of this kind. This inconvenience arises from the overly concrete nature of $\bR^n$.
 
 In fact, the properties VS1-VS8, which we actually used and will be reproduced below, are not unique to the space $\bR^n$. Consider, for example, the differential equation $d^2x/dt^2+ x = 0$ taught in schools. It is known that its general solution can be written as $x (t) = \alpha \sin t+\beta \cos t$. If $\alpha_0 ,\beta_0$ are such that $\alpha_0 \sin t + \beta_0 \cos t = 0$ for all $t$, then setting in turn $t_1=\pi /2,t_2=0$, we get $\alpha_0 = 0 =\beta_0$. This fact gives grounds to talk about the linearly independent particular solutions $\sin t, \cos t$ and the two-dimensional linear space formed by the general solutions of $d^2x/dt^2+ x = 0$ in the spirit of the following definition.
 
@@ -60,26 +60,26 @@ We say that $\langle M\rangle$ is the \textit{linear hull(span)} of the set $M\s
 	Let $V$ be a vector space over $\fK$, $U\subset V$ its subset which is an additive subgroup of $U$ that transforms into itself under multiplication by scalars. Then the restriction to $U$ of the operations defined on $V$ gives $U$ the structure of a vector space. It is called a \textit{vector} (or \textit{linear}) \textit{subspace} of $V$.
 \end{definition}
 
-The intersection of any number of vector spaces is also a vector subspace (see the beginning of Para. 4 of \S\ref{sec:1.1-2}; it is easy exercise which is considered in [BA I] for the case of groups). We see that the linear span $\langle M\rangle$ of a system of vectors $M\subset V$ is a vector subspace of $V$, and, obviously, $\langle M\rangle$ is the smallest subspace of $V$ containing $M$. It is also said that $\langle M\rangle$ is the subspace \textit{spanned} by the vectors $x\in M$ or \textit{generated} by the vectors $x\in M$. If, from the very beginning, $M$ was a subspace, then $\langle M\rangle = M$.
+The intersection of any number of vector spaces is also a vector subspace (see the beginning of Para. 4 of \S\ref{sec:1.1-2}; it is easy exercise which is considered in [IA I] for the case of groups). We see that the linear span $\langle M\rangle$ of a system of vectors $M\subset V$ is a vector subspace of $V$, and, obviously, $\langle M\rangle$ is the smallest subspace of $V$ containing $M$. It is also said that $\langle M\rangle$ is the subspace \textit{spanned} by the vectors $x\in M$ or \textit{generated} by the vectors $x\in M$. If, from the very beginning, $M$ was a subspace, then $\langle M\rangle = M$.
 
 We give some examples of vector spaces that will occur in the future.
 
-\begin{example}[zero-dimensional space]
+\begin{example}[\textit{zero-dimensional space}]
 	Over any field $\fK$ there exists a zero-dimensional (singleton) vector space $V = \{\v0\}$ with the law of multiplication by scalars $\lambda \v0 = \v0$.
 \end{example}
 
-\begin{example}[the base field $\fK$ as a one-dimensional coordinate space]\label{ex:base-field-space}
+\begin{example}[\textit{the base field $\fK$ as a one-dimensional coordinate space}]\label{ex:base-field-space}
 	By the definition of $V=\fK$, the basic operation of $V$ coincide with the operations in $\fK$. If $1$ is the unit of the field $\fK$, then we can assume that $\fK = \langle 1\rangle$ is the linear span of $1$.
 	
 	More generally, if a field $\fK$ is an expansion of its subfield $\fB$, then $\fK$ can be regarded as a vector space over $\fB$. For example, the field of complex numbers $\bC$ is a vector space over the field of real numbers $\bR$, and $\bR$ is a vector space over the field of rational numbers $\bQ$.
 \end{example}
 
-\begin{example}[the $n$-dimensional coordinate space ${\fK}^n$; see [BA I, Ch. 2], where the field $\bR$ can be replaced by an arbitrary field $\fK$]
+\begin{example}[\textit{the $n$-dimensional coordinate space ${\fK}^n$}; see {[IA I, Ch. 2]}, where the field $\bR$ can be replaced by an arbitrary field $\fK$]
 	For $n = 1$ we obtain the previous example. We will see soon (see \S\ref{sec:1.3}) that every subspace $U\subset {\fK}^n$ is a solution space of some homogeneous linear system.
 \end{example}
 
-\begin{example}[function spaces]\label{ex:function-space}
-	In [BA I, Ch. 1, \S4, Para. 1] we introduced the ring of functions $K^X$, which in fact is still a vector space over K (the ring $K$ must be replaced by a field). Thus, $X$ is an arbitrary set, $\fK$ is a field, and ${\fK}^X$ is the set of mappings (functions) $f: X\to \fK$, endowed with pointwise operations of addition and multiplication by scalars:
+\begin{example}[\textit{function spaces}]\label{ex:function-space}
+	In [IA I, Ch. 1, \S4, Para. 1] we introduced the ring of functions $K^X$, which in fact is still a vector space over K (the ring $K$ must be replaced by a field). Thus, $X$ is an arbitrary set, $\fK$ is a field, and ${\fK}^X$ is the set of mappings (functions) $f: X\to \fK$, endowed with pointwise operations of addition and multiplication by scalars:
 \begin{align*}
 (f+g)(x) = f(x)+g(x) \text{\quad for all\quad} x\in X;\\
 (\lambda f)(x) = \lambda (f(x)) \text{\quad for all\quad} \lambda\in F, x\in X.
@@ -101,12 +101,12 @@ In analysis, we most often consider real-valued functions defined on the whole r
 	Let $g(t)$ be a fixed continuous real function on the interval $[0,1]$, nonzero on some interval $J\subset [0,1]$, and $V_n (g)$ the set of functions of the form $f(t)g(t)$ where $f(t)$ is a polynomial of degree$\le n-1$. Then $P_n^g$ is a vector space contained in $\bR_{\mathrm{cont}}^J$.
 \end{example}
 
-\begin{example}[matrix spaces]
-	According to the rules of matrix calculus (see [BA I, Ch. 2]), any rectangular matrix of size $m\times n$ can be multiplied by an element of the field $\fK$ and any two can be added, resulting in a matrix of the same kind. All the axioms are satisfied, so the $m\times n$ matrices form a vector space. For $m = n$ the ring of square matrices $M_n (\fK)$, which is also a vector space over $\fK$, is called an \textit{algebra}, in accordance with the general definition that we will give in \S\ref{sec:2.2} of Chapter \ref{ch:2} and under which the objects of Examples \ref{ex:base-field-space} and \ref{ex:function-space} also fall.
+\begin{example}[\textit{matrix spaces}]
+	According to the rules of matrix calculus (see [IA I, Ch. 2]), any rectangular matrix of size $m\times n$ can be multiplied by an element of the field $\fK$ and any two can be added, resulting in a matrix of the same kind. All the axioms are satisfied, so the $m\times n$ matrices form a vector space. For $m = n$ the ring of square matrices $M_n (\fK)$, which is also a vector space over $\fK$, is called an \textit{algebra}, in accordance with the general definition that we will give in \S\ref{sec:2.2} of Chapter \ref{ch:2} and under which the objects of Examples \ref{ex:base-field-space} and \ref{ex:function-space} also fall.
 	% TODO: 这句话到底是什么鬼
 \end{example}
 
-\begin{example}[Amer. Math. Monthly., Vol. 94, 1990, p. 60-62]
+\begin{example}[Amer. Math. Monthly., Vol. 94, 1990, pp. 60-62]
 	A matrix $A$ is called \textit{semimagic} (or a \textit{semimagic square}) if the sum of the coefficients in each row and each column are the same:
 	\[\sum_{k=1}^n a_{ik} = \sum_{k=1}^na_{kj} = \sigma (A)\in \bQ,\quad 1\le i,j \le n.\]
 	
@@ -119,7 +119,7 @@ In analysis, we most often consider real-valued functions defined on the whole r
 \subsection{Remarks on Geometric Interpretation.}
 $V$ is called a \textit{real} (resp. \textit{complex}) vector space if $\fK =\bR$ (resp. $\fK =\bC$); scalars are then just numbers. It is these cases that are the most interesting from a practical point of view, although much of the theory does not depend on the nature of the field $\fK$.
 
-The most natural model of a vector space is, of course, a set of directed segments emanating from a fixed point in the three-dimensional space in which we live. Multiplication of a segment by $\lambda \in \bR$ times corresponds to its extension by $\lambda > 1$ times (or compression by $\lambda$ times, for $\lambda\le 1$) and a change in the direction of the segment for negative $\lambda$'s. Addition of directed segments is carried out according to the parallelogram rule. This real vector space also coincides with the set of free geometric vectors, if we agree to consider equal two directed segments that can be combined by parallel translation.
+The most natural model of a vector space is, of course, a set of directed segments emanating from a fixed point in the three-dimensional space in which we live. Multiplication of a segment by $\lambda \in \bR$ times corresponds to its extension by $\lambda > 1$ fold ($\lambda$-fold compression, for $\lambda\le 1$) and a change in the direction of the segment for negative $\lambda$'s. Addition of directed segments is carried out according to the parallelogram rule. This real vector space also coincides with the set of free geometric vectors, if we agree to consider equal two directed segments that can be combined by parallel translation.
 
 Objects of the physical three-dimensional space $\bR_\Phi^3$ are usually represented by figures. In the case of multidimensional spaces (we will discuss dimension in \S\ref{sec:1.2}) our intuition is severely tested, yet a systematic appeal to geometric images is not only useful, but also necessary: to develop firm associations that revitalize the theory.
 
@@ -135,4 +135,4 @@ The extent to which the vector space $V$ carries the imprint of the properties o
 	\caption{}
 \end{figure}
 
-The subspace $V_n$ consisting of points with $\eps_1 +\eps_2 + \dots + \eps_n = 0$ (recall that $1 + 0 = 0 + 1 = 1, 0 + 0 = 0 = 1 + 1$) defines the simplest code that corrects one error (see [BA I, Chapter 4, \S4, p. 7\footnote{Reference is to Russian version.}]). That is, provided that the encoded signals correspond only to a point $(\eps_1 ,\eps_2 ,\dots ,\eps_n )\in V_n$ and receiving a signal $(\eps_1 ',\eps_2 ',\dots ,\eps_n ')$ with $\eps_1 +\eps_2 + \dots + \eps_n = 1$, we can reasonably assume that the transmission of this message was distorted by external interference. Of course, our code with parity check will not find two distortions, since in that case $(\eps_1 ',\eps_2 ',\cdots ,\eps_n ') \in V_n$.
+The subspace $V_n$ consisting of points with $\eps_1 +\eps_2 + \dots + \eps_n = 0$ (recall that $1 + 0 = 0 + 1 = 1, 0 + 0 = 0 = 1 + 1$) defines the simplest code that corrects one error (see [IA I, Chapter 4, \S4, p. 7\footnote{\textit{Translator's note}: Reference is to Russian version.}]). That is, provided that the encoded signals correspond only to a point $(\eps_1 ,\eps_2 ,\dots ,\eps_n )\in V_n$ and receiving a signal $(\eps_1 ',\eps_2 ',\dots ,\eps_n ')$ with $\eps_1 +\eps_2 + \dots + \eps_n = 1$, we can reasonably assume that the transmission of this message was distorted by external interference. Of course, our code with parity check will not find two distortions, since in that case $(\eps_1 ',\eps_2 ',\cdots ,\eps_n ') \in V_n$.

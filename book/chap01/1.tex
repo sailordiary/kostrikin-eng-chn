@@ -43,10 +43,10 @@ b) $\lambda \vx =\v0\Rightarrow \lambda =0$ or $\vx =\v0$. If, for example, $\la
 
 c) $(n\cdot 1)\vx =\vx +\vx +\dots +\vx$ ($n$ terms) for any positive integer $n$ and any $\vx\in V$ (the proof is by induction on $n$). It is natural to write simply $nx$ instead of $(n\cdot 1)\vx$, where $1$ is the unit of the field $\fK$. If $\fK$ is a field of finite characteristic $p$, then $p\vx =\v0$;
 
-d) $(-1)\vx =-\vx$. Indeed, $\vx +(-1)\vx=1\vx+(-1)\vx =(1+(-1))\vx =\v0\vx=\v0$.
+d) $(-1)\vx =-\vx$. Indeed, $\vx +(-1)\vx=1\vx+(-1)\vx =(1+(-1))\vx =0\vx=\v0$.
 
 \subsection{Linear Hull (Span). Subspaces.}\label{sec:1.1-2}
-Note that arranging any finite set of scalars $\lambda_i , \dots, \lambda_n \in \fK$ and vectors $\vx_1, \dots , \vx_n \in V$, we can form the expression
+Note that arranging any finite set of scalars $\lambda_i , \dots, \lambda_n \in \fK$ and vectors $\vx_1, \dots , \vx_n \in V$, we can formulate the expression
 \[\lambda_1 \vx_1 + \dots + \lambda_n \vx_n =\sum_{i=1}^n \lambda_i \vx_i ,\]
 called a \textit{linear combination} of the vectors $\vx_i$ with coefficients $\lambda_i$. More generally, if $I$ is a family of indices, possibly infinite, and $M = \{\vx_i\in V\mid i\in I\}$ is a subset of vectors in $V$, then it is legitimate to consider linear combinations $\sum_{i\in I}\lambda_i \vx_i$ with arbitrary coefficients $\lambda_i \in \fK$, among which, however, only a finite number are nonzero. Clearly, 
 \[\lambda\Bigl(\sum \lambda_i\vx_i\Bigr)=\sum (\lambda\lambda_i)\vx_i\]
@@ -68,17 +68,17 @@ We give some examples of vector spaces that will occur in the future.
 	Over any field $\fK$ there exists a zero-dimensional (singleton) vector space $V = \{\v0\}$ with the law of multiplication by scalars $\lambda \v0 = \v0$.
 \end{example}
 
-\begin{example}[the base field $\fK$ as a one-dimensional coordinate space]
+\begin{example}[the base field $\fK$ as a one-dimensional coordinate space]\label{ex:base-field-space}
 	By the definition of $V=\fK$, the basic operation of $V$ coincide with the operations in $\fK$. If $1$ is the unit of the field $\fK$, then we can assume that $\fK = \langle 1\rangle$ is the linear span of $1$.
 	
 	More generally, if a field $\fK$ is an expansion of its subfield $\fB$, then $\fK$ can be regarded as a vector space over $\fB$. For example, the field of complex numbers $\bC$ is a vector space over the field of real numbers $\bR$, and $\bR$ is a vector space over the field of rational numbers $\bQ$.
 \end{example}
 
 \begin{example}[the $n$-dimensional coordinate space ${\fK}^n$; see [BA I, Ch. 2], where the field $\bR$ can be replaced by an arbitrary field $\fK$]
-	For $n = 1$ we obtain the previous example. We will see soon (see \S\ref{sec:1.1-3}) that every subspace $U\subset {\fK}^n$ is a solution space of some homogeneous linear system.
+	For $n = 1$ we obtain the previous example. We will see soon (see \S\ref{sec:1.3}) that every subspace $U\subset {\fK}^n$ is a solution space of some homogeneous linear system.
 \end{example}
 
-\begin{example}[function spaces]
+\begin{example}[function spaces]\label{ex:function-space}
 	In [BA I, Ch. 1, \S4, Para. 1] we introduced the ring of functions $K^X$, which in fact is still a vector space over K (the ring $K$ must be replaced by a field). Thus, $X$ is an arbitrary set, $\fK$ is a field, and ${\fK}^X$ is the set of mappings (functions) $f: X\to \fK$, endowed with pointwise operations of addition and multiplication by scalars:
 \begin{align*}
 (f+g)(x) = f(x)+g(x) \text{\quad for all\quad} x\in X;\\
@@ -98,13 +98,41 @@ In analysis, we most often consider real-valued functions defined on the whole r
 \end{example}
 
 \begin{example}
-	Let $g(t)$ be a fixed continuous real function on the interval $[0,1]$ that is nonzero on some interval $J\subset [0,1]$, and $V_n (g)$ the set of functions of the form $f(t)g(t)$, where $f(t)$ is a polynomial of degree$\le n-1$. Then $P_n^g$ is a vector space contained in $\bR_{\mathrm{cont}}^J$.
+	Let $g(t)$ be a fixed continuous real function on the interval $[0,1]$, nonzero on some interval $J\subset [0,1]$, and $V_n (g)$ the set of functions of the form $f(t)g(t)$ where $f(t)$ is a polynomial of degree$\le n-1$. Then $P_n^g$ is a vector space contained in $\bR_{\mathrm{cont}}^J$.
 \end{example}
 
 \begin{example}[matrix spaces]
-	According to the rules of matrix calculus (see [BA I, Ch. 2]), any rectangular matrix of size $m\times n$ can be multiplied by an element of the field $\fK$ and any two can be added, resulting in a matrix of the same kind. All the axioms are satisfied, so the $m\times n$ matrices form a vector space. For $m = n$ the ring of square matrices $M_n (\fK)$, which is also a vector space over $\fK$, is called an \textit{algebra}, in accordance with the general definition that we will give in \S\ref{sec:2.2} of Chapter \ref{ch:2} and under which the objects of Examples 2 and 4 also fall.
-	% 这句话到底是什么鬼
+	According to the rules of matrix calculus (see [BA I, Ch. 2]), any rectangular matrix of size $m\times n$ can be multiplied by an element of the field $\fK$ and any two can be added, resulting in a matrix of the same kind. All the axioms are satisfied, so the $m\times n$ matrices form a vector space. For $m = n$ the ring of square matrices $M_n (\fK)$, which is also a vector space over $\fK$, is called an \textit{algebra}, in accordance with the general definition that we will give in \S\ref{sec:2.2} of Chapter \ref{ch:2} and under which the objects of Examples \ref{ex:base-field-space} and \ref{ex:function-space} also fall.
+	% TODO: 这句话到底是什么鬼
 \end{example}
-\[\sum_{k=1}^n a_{ik} = \sum_{k=1}^na_{kj} = \sigma (A)\in \bQ,\quad 1\le i,j \le n.\]
-\[\mathrm{Mag}_n(\bQ) \subset \mathrm{SMag}_n(\bQ) \subset M_n(\bQ).\]
-\subsection{Remarks on Geometric Interpretation.}\label{sec:1.1-3}
+
+\begin{example}[Amer. Math. Monthly., Vol. 94, 1990, p. 60-62]
+	A matrix $A$ is called \textit{semimagic} (or a \textit{semimagic square}) if the sum of the coefficients in each row and each column are the same:
+	\[\sum_{k=1}^n a_{ik} = \sum_{k=1}^na_{kj} = \sigma (A)\in \bQ,\quad 1\le i,j \le n.\]
+	
+	If, moreover, $\tr A=\sigma (A)\coloneqq \sum_{i=1}^n a_{i,n+1-i}$, the matrix $A$ is called \textit{magic} (or a \textit{magic square}).
+
+	Magic squares have attracted attention since ancient times. We are interested in them for the fairly obvious reason that both the set of semimagic squares $\mathrm{SMag}_n (\bQ)$ and the set $\mathrm{Mag}_n (\bQ)$ of all magic squares of order $n$ are vector spaces over $\bQ$, and moreover, 
+	\[\mathrm{Mag}_n(\bQ) \subset \mathrm{SMag}_n(\bQ) \subset M_n(\bQ).\]
+	It is worth mentioning that we do not consider a purely combinatorial set of $n\times n$ magic squares with natural number coefficients $1, 2, \dots , n^2$. See on this subject: \textit{M. M. Postnikov}, Magic squares. Moscow: Nauka, 1964.
+\end{example}
+\subsection{Remarks on Geometric Interpretation.}
+$V$ is called a \textit{real} (resp. \textit{complex}) vector space if $\fK =\bR$ (resp. $\fK =\bC$); scalars are then just numbers. It is these cases that are the most interesting from a practical point of view, although much of the theory does not depend on the nature of the field $\fK$.
+
+The most natural model of a vector space is, of course, a set of directed segments emanating from a fixed point in the three-dimensional space in which we live. Multiplication of a segment by $\lambda \in \bR$ times corresponds to its extension by $\lambda > 1$ times (or compression by $\lambda$ times, for $\lambda\le 1$) and a change in the direction of the segment for negative $\lambda$'s. Addition of directed segments is carried out according to the parallelogram rule. This real vector space also coincides with the set of free geometric vectors, if we agree to consider equal two directed segments that can be combined by parallel translation.
+
+Objects of the physical three-dimensional space $\bR_\Phi^3$ are usually represented by figures. In the case of multidimensional spaces (we will discuss dimension in \S\ref{sec:1.2}) our intuition is severely tested, yet a systematic appeal to geometric images is not only useful, but also necessary: to develop firm associations that revitalize the theory.
+
+The unusual geometry of a vector space geometry can also be connected with the singularities of the field $\fK$. For example, if $\fK = \bC$, then a straight line over $\bC$ is a one-dimensional coordinate space $\bC^1$. Its clear geometric image is the plane of complex numbers $\bR^2$, which should not be confused with $\bC^2$. The point $(x, y) \in \bR^2$ corresponds to the number $z = x + iy\in \bC^1$; multiplication by $a\ne 0$ corresponds to stretching by a factor of $|a|$ and counterclockwise rotation by the angle $\arg a$. In particular, for $a=-1$ the restriction of the rotation of $\bC^1$ by $\ang{180}$ to $\bR^1$ gives the ``inversion" of the straight line $\bR^1$. In Chapter 3, \S4, the operations of complexification and decomplexification will be described, allowing us to take advantage of the algebraic closure of $\bC$ (for working with real vector spaces), and the $n$-dimensional complex space $\bC^n$ be represented as a $2n$-dimensional real space $\bR^{2n}$.
+
+Note also that the physical space $\bR_\Phi^3$ is much richer than the coordinate space of the same dimension, since in $\bR_\Phi^3$ the lengths of vectors, the angles between them, and the area and volume of figures are defined. All this additional information is inadvertently transferred to figures designed to reflect the properties of abstract vector spaces, the axiomatics of which are still poor. Its enrichment with metric concepts is fully realized only in subsequent chapters.
+
+The extent to which the vector space $V$ carries the imprint of the properties of the scalar field can also be seen from the fact that if $\fK$ is a finite field, then the geometric images introduced from $\fK^3$ are ``leaky" (a consequence of the discreteness of $\fK$). But this disadvantage of $\fK$ can sometimes be beaten (Fig.~\ref{fig:discrete-image}), by associating discrete images of a different kind with a linear geometry over $\fK$. For example, the $n$-dimensional coordinate space $\mathbb{F}_2^n$ over a field of two elements $\bF_2 =\{0,1\}\cong\bZ_2$ admits a natural identification with the set $\{(\eps_1 ,\eps_2 ,\dots ,\eps_n ); \eps_i =0 \text{ or } \eps_i = 1\}$ of the vertices of the $n$-dimensional cube in $\bR^n$.
+
+\begin{figure}
+	% TODO: Figure 1 placeholder
+	\label{fig:discrete-image}
+	\caption{}
+\end{figure}
+
+The subspace $V_n$ consisting of points with $\eps_1 +\eps_2 + \dots + \eps_n = 0$ (recall that $1 + 0 = 0 + 1 = 1, 0 + 0 = 0 = 1 + 1$) defines the simplest code that corrects one error (see [BA I, Chapter 4, \S4, p. 7\footnote{Reference is to Russian version.}]). That is, provided that the encoded signals correspond only to a point $(\eps_1 ,\eps_2 ,\dots ,\eps_n )\in V_n$ and receiving a signal $(\eps_1 ',\eps_2 ',\dots ,\eps_n ')$ with $\eps_1 +\eps_2 + \dots + \eps_n = 1$, we can reasonably assume that the transmission of this message was distorted by external interference. Of course, our code with parity check will not find two distortions, since in that case $(\eps_1 ',\eps_2 ',\cdots ,\eps_n ') \in V_n$.

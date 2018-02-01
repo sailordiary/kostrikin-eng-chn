@@ -127,12 +127,13 @@ The unusual geometry of a vector space geometry can also be connected with the s
 
 Note also that the physical space $\bR_\Phi^3$ is much richer than the coordinate space of the same dimension, since in $\bR_\Phi^3$ the lengths of vectors, the angles between them, and the area and volume of figures are defined. All this additional information is inadvertently transferred to figures designed to reflect the properties of abstract vector spaces, the axiomatics of which are still poor. Its enrichment with metric concepts is fully realized only in subsequent chapters.
 
-The extent to which the vector space $V$ carries the imprint of the properties of the scalar field can also be seen from the fact that if $\fK$ is a finite field, then the geometric images introduced from $\fK^3$ are ``leaky" (a consequence of the discreteness of $\fK$). But this disadvantage of $\fK$ can sometimes be beaten (Fig.~\ref{fig:discrete-image}), by associating discrete images of a different kind with a linear geometry over $\fK$. For example, the $n$-dimensional coordinate space $\mathbb{F}_2^n$ over a field of two elements $\bF_2 =\{0,1\}\cong\bZ_2$ admits a natural identification with the set $\{(\eps_1 ,\eps_2 ,\dots ,\eps_n ); \eps_i =0 \text{ or } \eps_i = 1\}$ of the vertices of the $n$-dimensional cube in $\bR^n$.
+The extent to which the vector space $V$ carries the imprint of the properties of the scalar field can also be seen from the fact that if $\fK$ is a finite field, then the geometric images introduced from $\fK^3$ are ``leaky" (a consequence of the discreteness of $\fK$). But this disadvantage of $\fK$ can sometimes be beaten (Fig.~\ref{fig:discrete-image}), by associating discrete images of a different kind with a linear geometry over $\fK$. For example, the $n$-dimensional coordinate space $\bF_2^n$ over a field of two elements $\bF_2 =\{0,1\}\cong\bZ_2$ admits a natural identification with the set $\{(\eps_1 ,\eps_2 ,\dots ,\eps_n ); \eps_i =0 \text{ or } \eps_i = 1\}$ of the vertices of the $n$-dimensional cube in $\bR^n$.
 
 \begin{figure}
-	% TODO: Figure 1 placeholder
-	\label{fig:discrete-image}
+	\centering
+	\includegraphics[width=0.4\textwidth]{../fig/fig-1.pdf}
 	\caption{}
+	\label{fig:discrete-image}
 \end{figure}
 
 The subspace $V_n$ consisting of points with $\eps_1 +\eps_2 + \dots + \eps_n = 0$ (recall that $1 + 0 = 0 + 1 = 1, 0 + 0 = 0 = 1 + 1$) defines the simplest code that corrects one error (see [IA I, Chapter 4, \S4, p. 7\footnote{\textit{Translator's note}: Reference is to Russian version.}]). That is, provided that the encoded signals correspond only to a point $(\eps_1 ,\eps_2 ,\dots ,\eps_n )\in V_n$ and receiving a signal $(\eps_1 ',\eps_2 ',\dots ,\eps_n ')$ with $\eps_1 +\eps_2 + \dots + \eps_n = 1$, we can reasonably assume that the transmission of this message was distorted by external interference. Of course, our code with parity check will not find two distortions, since in that case $(\eps_1 ',\eps_2 ',\cdots ,\eps_n ') \in V_n$.
